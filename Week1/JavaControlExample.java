@@ -1,15 +1,33 @@
-package com.company;
 
 
+import java.util.Scanner;
 import java.util.Arrays;
 
 public class JavaControlExample {
+    
     static int[] theChosen = {0,1,1,2,3,5,8,13,21,34,55,89};
+    
     public static void printAll(int[] intArray){
         for(int eachInt:intArray){
             System.out.println(eachInt);
         }
     }
+    
+    public static int minInt(int[] ints){
+        int i = 0;
+        int min = 656565656;
+        do{
+            if(min>ints[i])
+                min=ints[i];
+            i++;
+        }while(i<ints.length);
+        return min;
+    }
+    
+    public static void blackHole(int h){
+        return;
+    }
+    
     public static int returnN(int n){
         try{
             return theChosen[n];
@@ -18,6 +36,7 @@ public class JavaControlExample {
         }
         return -1;
     }
+    
     public static void printEven(int[] ints){
         int countInts = ints.length;
         for(int i=0;i<countInts;i++){
@@ -25,6 +44,9 @@ public class JavaControlExample {
                 System.out.println(ints[i] +" is even.");
         }
     }
+    
+    
+    
     public static void printEvenOrOdd(int[] ints){
         int countInts = ints.length;
         for(int i=0;i<countInts;i++){
@@ -35,6 +57,7 @@ public class JavaControlExample {
             }
         }
     }
+    
     public static int sumInts(int[] ints){
         int i=0;
         int total = 0;
@@ -43,6 +66,7 @@ public class JavaControlExample {
         }
         return total;
     }
+    
     public static int[] insertInt(int num,int location){
         int[] newone = new int[theChosen.length+1];
         for(int x=0;x<location+1;x++){
@@ -54,8 +78,19 @@ public class JavaControlExample {
         }
         return newone;
     }
+    
     public static void main(String[] args) {
-        printAll(insertInt(65,3));
-
+        Scanner in = new Scanner(System.in);
+        int newInt = in.nextInt();
+        if(newInt==65){
+            newInt*=2
+        }else if(newInt>10000){
+            newInt = newInt/2 + 5;
+        }else{
+            newInt++;
+        }
+        printAll(insertInt(newInt,3));
+        System.out.println("The minimum int in theChosen is: "+minInt(theChosen));
+        System.out.println("The sum of the numbers in theChosen is: "+sumInts(theChosen));
     }
 }
