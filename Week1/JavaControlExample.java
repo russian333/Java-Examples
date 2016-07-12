@@ -1,4 +1,9 @@
-
+//
+// Brody Coleman
+// CS145
+// 07/01/2016
+// JavaControlExample.java
+//
 
 import java.util.Scanner;
 import java.util.Arrays;
