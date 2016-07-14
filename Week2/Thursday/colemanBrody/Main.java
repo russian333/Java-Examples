@@ -15,7 +15,7 @@ public class Main {
 
 
         Pair<String,myClass> pairup = new Pair<>("Brody",myName);
-        System.out.println(pairup.getFirst()+"\n"+pairup.getSecond()+"\n");
+        System.out.println(pairup.getFirst()+"\n"+pairup.getPair()+"\n");
 
 
         HashMap<String,myClass> lookup = new HashMap<>();
