@@ -1,11 +1,16 @@
 package edu.ctc.whatcom.colemanBrody;
 
 /**
- * Created by bcoleman on 7/13/2016.
- */
+ * Created by bcoleman 
+ * on 7/13/2016.
+ * Example Thread definitions. Also includes and example of running two of the defined threads.
+ * CS145
+ **/
 public class myThreads {
 
     public static void main(String[] args){
+    // Defines a runnable. Runs 6000 iterations printing every iteration. 
+    // Uses thread numbering int y
         Runnable myRun = new Runnable() {
             int y = 0;
             @Override
