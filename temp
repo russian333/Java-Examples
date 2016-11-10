@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+public class HelloWorld{
+    public static int len(String i){
+        
+    return i.length();
+    }
+    public static String asdf(String data){
+        
+        return data + " has length "+len(data)+".";
+    }
+     public static void main(String []args) throws Exception{
+        System.out.println("Hello World");
+        Scanner file = new Scanner(new File("StarData.txt"));
+        System.out.println(file.nextLine());
+        int[] temp = {5,67,4};
+        int[][] other = new int[5][3];
+        other[2]=temp;
+        System.out.println(asdf("asdfasdf"));
+        for(int[] i : other){
+            
+            System.out.println(Arrays.toString(i));
+        }
+        
+     }
+}
