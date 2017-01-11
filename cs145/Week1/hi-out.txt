@@ -1,3 +1,4 @@
+
 Compiled from "Hi.java"
 public class Hi {
   public Hi();
@@ -79,13 +80,4 @@ public class Hi {
      103: iinc          4, 1
      106: goto          62
      109: return
-
-  private static int side(int);
-    Code:
-       0: iload_0
-       1: iconst_2
-       2: imul
-       3: iconst_5
-       4: iadd
-       5: ireturn
 }
