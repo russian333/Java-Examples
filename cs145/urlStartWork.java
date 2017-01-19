@@ -1,5 +1,3 @@
-package yourPackage;
-
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Scanner;
@@ -25,15 +23,15 @@ Once the program sees one of the things we are interested in, a link, It should 
 its own line into a new file.
 */
 
-public class Main {
-    public static String doRequest(String addr)throws Exception{
+class urlStartWork {
+    public static String doRequest(String addr) throws Exception{
         InputStream response = new URL(addr).openStream();
         try (Scanner scanner = new Scanner(response)) {
             String responseBody = scanner.useDelimiter("\\A").next();
             return responseBody;
         }
     }
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception{
+        System.out.println(doRequest("https://www.google.com/"));
     }
 }
