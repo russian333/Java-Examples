@@ -75,7 +75,7 @@ class numberOp{
          public void run(){
             int total = 0;
             for(int x : slice){
-               total+=x;
+               total+=x+1;
             }
             data[thnum]= ((double)total)/slice.size();
          }
